@@ -24,7 +24,7 @@ export class StartScreenComponent implements OnInit {
       .collection('gmaes')
       .add(game.toJson())
       .then((gameInfo: any) => {
-        this.router.navigateByUrl('/game' + gameInfo.id);
+        this.router.navigateByUrl('/game/' + gameInfo.id);
       });
   }
 }
