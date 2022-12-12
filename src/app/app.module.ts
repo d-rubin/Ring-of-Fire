@@ -16,9 +16,9 @@ import { FormsModule } from '@angular/forms';
 import { GameInfoComponent } from './game-info/game-info.component';
 import { MatCardModule } from '@angular/material/card';
 import { environment } from '../environments/environment';
-import { AngularFireModule } from "@angular/fire/compat";
 import { PlayerMobileComponent } from './player-mobile/player-mobile.component';
-
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { AngularFireModule } from '@angular/fire/compat';
 
 @NgModule({
   declarations: [
@@ -31,6 +31,8 @@ import { PlayerMobileComponent } from './player-mobile/player-mobile.component';
     PlayerMobileComponent
   ],
   imports: [
+    // AngularFireModule.initializeApp(environment.firebase),
+    // provideFirebaseApp(() => initializeApp(environment.firebase)),
     AngularFireModule.initializeApp(environment.firebase),
     BrowserModule,
     AppRoutingModule,
