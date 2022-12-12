@@ -21,7 +21,7 @@ export class StartScreenComponent implements OnInit {
   newGame() {
     let game = new Game();
     this.firestore
-      .collection('gmaes')
+      .collection('games')
       .add(game.toJson())
       .then((gameInfo: any) => {
         this.router.navigateByUrl('/game/' + gameInfo.id);

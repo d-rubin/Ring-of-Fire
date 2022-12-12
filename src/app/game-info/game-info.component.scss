@@ -4,4 +4,14 @@
     mat-card-title {
         padding-left: 16px;
     }
+
+    mat-card-content {
+        padding-left: 16px;
+    }
+}
+
+mat-card {
+    @media(max-width: 720px) {
+        min-height: 100px;
+    }
 }
