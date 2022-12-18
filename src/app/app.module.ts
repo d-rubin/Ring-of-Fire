@@ -32,9 +32,9 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
     PlayerMobileComponent
   ],
   imports: [
-    // AngularFireModule.initializeApp(environment.firebase),
-    // provideFirebaseApp(() => initializeApp(environment.firebase)),
-    AngularFireModule.initializeApp(environment.firebase),
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideFirestore(() => getFirestore()),
+    AngularFireModule,
     BrowserModule,
     AppRoutingModule,
     MatDialogModule,
@@ -44,7 +44,6 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
     MatCardModule,
     MatIconModule,
     BrowserAnimationsModule,
-    provideFirestore(() => getFirestore())
   ],
   providers: [],
   bootstrap: [AppComponent]
