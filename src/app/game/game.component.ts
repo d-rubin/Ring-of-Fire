@@ -25,7 +25,7 @@ export class GameComponent implements OnInit{
       this
       .firestore
       .collection('games')
-      .doc(params['id'])
+      .doc(this.gameId)
       .valueChanges()
       .subscribe((game: any) => {
         this.game.currentPlayer = game.currentPlayer;
@@ -73,7 +73,7 @@ export class GameComponent implements OnInit{
     this
     .firestore
     .collection('games')
-    .doc(this.gameId['id'])
+    .doc(this.gameId)
     .update(this.game.toJson());
   }
 }
